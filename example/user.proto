@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package fixbug;
+
+option cc_generic_services = true;
+
+message ResultCode
+{
+    int32 errcode = 1; // 0: success, 1: fail
+    string errmsg = 2; // error message
+}
+
+message LoginRequest
+{
+    string username = 1; // 用户名
+    string password = 2; // 密码
+}
+
+message LoginResponse
+{
+    ResultCode result = 1; // 登录结果
+    bool success = 2;
+}
+
+message RegisterRequest
+{
+    uint32 id = 1;  // 用户id
+    string username = 2; // 用户名
+    string password = 3; // 密码
+}
+
+message RegisterResponse
+{
+    ResultCode result = 1;
+    bool success = 2;
+}
+
+service UserServiceRpc
+{
+    // 登录
+    rpc Login(LoginRequest) returns (LoginResponse);
+    rpc Register(RegisterRequest) returns (RegisterResponse);
+}

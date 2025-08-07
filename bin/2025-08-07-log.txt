@@ -1,0 +1,10 @@
+6:37:41 ==> first log message!
+6:37:41 ==> /home/hsh/mprpc/example/callee/friendservice.cc:main:49
+9:35:49 ==> [error] first log message!
+9:35:49 ==> [error] /home/hsh/mprpc/example/callee/friendservice.cc:main:49
+9:35:49 ==> [info] service name: FriendServiceRpc
+9:35:49 ==> [info] method name: GetFriendList
+11:22:1 ==> [error] first log message!
+11:22:1 ==> [error] /home/hsh/mprpc/example/callee/friendservice.cc:main:49
+11:22:1 ==> [info] service name: FriendServiceRpc
+11:22:1 ==> [info] method name: GetFriendList
